@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - checkout
-
+    - run: sleep 25 
     - restore_cache:
         keys:
         - v1-dependencies-{{ checksum "Gemfile.lock" }}
