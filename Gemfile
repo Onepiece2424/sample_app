@@ -59,6 +59,8 @@ group :test do
   # gem 'chromedriver-helper'
   gem 'webdrivers'
   gem 'rspec-rails'
+  gem "rspec"
+  gem "rspec_junit_formatter"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
