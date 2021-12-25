@@ -1,6 +1,33 @@
 <h1>トップページ</h1>
 <br>
-<p><%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %></p>
-<p><%= link_to "新規登録", new_user_registration_path, class:"btn btn-primary" %></p>
-<p><%= link_to "ログアウト", destroy_user_session_path, class:"btn btn-primary" %></p>
-<p><%= link_to "詳細ページ", pages_show_path, class:"btn btn-primary" %></p>
+<div class="row">
+  <p class="col-md-3"><%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %></p>
+  <p class="col-md-3"><%= link_to "新規登録", new_user_registration_path, class:"btn btn-primary" %></p>
+  <p class="col-md-3"><%= link_to "ログアウト", destroy_user_session_path, class:"btn btn-primary" %></p>
+  <p class="col-md-3"><%= link_to "詳細ページ", pages_path, class:"btn btn-primary" %></p>
+</div>
+<br>
+<br>
+<br>
+<h3>悩み一覧</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Worry</th>
+      <th>Reason</th>
+      <th>Approach</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.date %></td>
+        <td><%= page.worry %></td>
+        <td><%= page.reason %></td>
+        <td><%= page.approach %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
