@@ -9,7 +9,7 @@
 <br>
 <br>
 <br>
-<h3>悩み一覧</h3>
+<h3>Worry List</h3>
 
 <table>
   <thead>
@@ -30,9 +30,12 @@
         <td><%= page.worry %></td>
         <td><%= page.reason %></td>
         <td><%= page.approach %></td>
+        <td><%= link_to "詳細", page_path(page.id) %></td>
+        <td><%= link_to "編集", edit_page_path(page.id) %></td>
+        <td><%= link_to "削除", page, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<p><%= link_to "悩み作成", new_page_path %></p>
+<br>
+<p><%= link_to "Worryの作成", new_page_path %></p>

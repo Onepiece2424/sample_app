@@ -23,11 +23,23 @@ class PagesController < ApplicationController
   end
 
   def edit
+    @page = Page.find(params[:id])
   end
 
   def update
+    @page = Page.find(params[:id])
+    if @page.update(params.require(:page).permit(:date, :worry, :reason, :approach))
+      flash[:notice] = "ユーザーIDが「#{@page.id}」の情報を更新しました"
+      redirect_to :pages
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @page = Page.find(params[:id])
+    @page.destroy
+    flash[:notice] = 'ユーザーを削除しました'
+    redirect_to :pages
   end
 end
