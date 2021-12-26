@@ -29,7 +29,7 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     if @page.update(params.require(:page).permit(:date, :worry, :reason, :approach))
-      flash[:notice] = "ユーザーIDが「#{@page.id}」の情報を更新しました"
+      flash[:notice] = "「Worry」の情報を更新しました"
       redirect_to :pages
     else
       render 'edit'
