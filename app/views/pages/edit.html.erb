@@ -1,1 +1,33 @@
+<h3>悩み・不安・イライラ一覧の編集</h3>
+<br>
+<br>
+<div class="container">
+<div class="row">
+<%= form_for @page do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :date ,"Date" %></th>
+      <td><%= f.text_field :date %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :worry ,"Worry" %></th>
+      <td><%= f.text_field :worry %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :reason ,"Reason,Background" %></th>
+      <td><%= f.text_field :reason %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :approach ,"Approach" %></th>
+      <td><%= f.text_field :approach %></td>
+    </tr>
+  </table>
+  <br>
+  <div>
+    <%= f.submit "編集を完了する" %>
+  </div>
+<% end %>
+</div>
+</div>
+<br>
 <p><%= link_to "トップページ", root_path, class:"btn btn-primary" %></p>
