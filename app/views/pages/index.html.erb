@@ -1,10 +1,10 @@
-<h1>悩み・不安・イライラの一覧</h1>
+<h1>Would you like to solve your worries?</h1>
 <br>
 <br>
 <div class="row">
-  <p class="col-md-3"><%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %></p>
-  <p class="col-md-3"><%= link_to "新規登録", new_user_registration_path, class:"btn btn-primary" %></p>
-  <p class="col-md-3"><%= link_to "ログアウト", destroy_user_session_path, class:"btn btn-primary" %></p>
+  <p class="col-md-4"><%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %></p>
+  <p class="col-md-4"><%= link_to "新規登録", new_user_registration_path, class:"btn btn-primary" %></p>
+  <p class="col-md-4"><%= link_to "ログアウト", destroy_user_session_path, class:"btn btn-primary" %></p>
 </div>
 <br>
 <br>
@@ -18,7 +18,7 @@
     <tr>
       <th class="col-md-2">Date</th>
       <th class="col-md-2">Worry</th>
-      <th class="col-md-2">Reason</th>
+      <th class="col-md-2">Reason,Background</th>
       <th class="col-md-2">Approach</th>
       <th class="col-md-2">詳細/編集/削除</th>
     </tr>
@@ -44,4 +44,4 @@
   </tbody>
 </table>
 <br>
-<p><%= link_to "Worryの作成", new_page_path %></p>
+<p><%= link_to "Create a Worry", new_page_path %></p>
