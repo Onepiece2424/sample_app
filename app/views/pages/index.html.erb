@@ -20,7 +20,7 @@
       <th class="col-md-2">Worry</th>
       <th class="col-md-2">Reason,Background</th>
       <th class="col-md-2">Approach</th>
-      <th class="col-md-2">詳細/編集/削除</th>
+      <th class="col-md-2">Detail/Edit/Delete</th>
     </tr>
   </thead>
   </div>
@@ -34,9 +34,9 @@
         <td class="col-md-2"><%= page.worry %></td>
         <td class="col-md-2"><%= page.reason %></td>
         <td class="col-md-2"><%= page.approach %></td>
-        <td class="col-md-2"><%= link_to "詳細", page_path(page.id) %>
-        <%= link_to "編集", edit_page_path(page.id) %>
-        <%= link_to "削除", page, method: :delete %></td>
+        <td class="col-md-2"><%= link_to "Detail", page_path(page.id) %>
+        <%= link_to "Edit", edit_page_path(page.id) %>
+        <%= link_to "Delete", page, method: :delete %></td>
       </tr>
     <% end %>
   </div>
