@@ -1,3 +1,36 @@
-<h1>詳細ページ</h1>
+<h3>悩み・不安・イライラの詳細</h3>
+<br>
+<br>
+<div class="container">
+<div class="row">
+<table>
+  <div class="col-md-2">
+  <tr>
+    <th>Date</th>
+    <td><%= @page.date %></td>
+  </tr>
+  </div>
+  <div class="col-md-2">
+  <tr>
+    <th>Worry</th>
+    <td><%= @page.worry %></td>
+  </tr>
+  </div>
+  <div class="col-md-2">
+  <tr>
+    <th>Reason</th>
+    <td><%= @page.reason %></td>
+  </tr>
+  </div>
+  <div class="col-md-2">
+  <tr>
+    <th>Approach</th>
+    <td><%= @page.approach %></td>
+  </tr>
+  </div>
+</table>
+</div>
+</div>
+<br>
 <br>
 <p><%= link_to "トップページ", root_path, class:"btn btn-primary" %></p>
