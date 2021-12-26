@@ -1,0 +1,28 @@
+<h1>悩み・不安・イライラの登録</h1>
+
+<%= form_with(model: @page, local: true) do |form| %>
+  <div>
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :worry %>
+    <%= form.text_area :worry %>
+  </div>
+
+  <div>
+    <%= form.label :reason %>
+    <%= form.text_area :reason %>
+  </div>
+
+  <div>
+    <%= form.label :approach %>
+    <%= form.text_area :approach %>
+  </div>
+
+  <div>
+    <%= form.submit "悩み登録" %>
+  </div>
+<% end %>
+<p><%= link_to "トップページ", root_path, class:"btn btn-primary" %></p>
