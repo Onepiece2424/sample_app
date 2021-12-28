@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:show,:new]
- 
+
   def index
     @pages = Page.all
   end
@@ -39,7 +39,7 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    flash[:notice] = 'Worryを1つ削除しました'
+    flash[:notice] = 'Worryを1つ解決しました!!'
     redirect_to :pages
   end
 end
