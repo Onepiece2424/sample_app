@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [:show,:new]
+  before_action :authenticate_user!, only: [:show, :new]
 
   def index
     @pages = Page.all
