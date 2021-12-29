@@ -34,9 +34,11 @@
         <td class="col-md-2"><%= page.worry %></td>
         <td class="col-md-2"><%= page.reason %></td>
         <td class="col-md-2"><%= page.approach %></td>
-        <td class="col-md-1"><%= link_to "Detail", page_path(page.id) %>
-        <%= link_to "Edit", edit_page_path(page.id) %>
-        <%= link_to "Delete", page, method: :delete %></td>
+        <td class="col-md-1">
+          <%= link_to "Detail", page_path(page.id) %>
+          <%= link_to "Edit", edit_page_path(page.id) %>
+          <%= link_to "Delete", page, method: :delete %>
+        </td>
       </tr>
     <% end %>
   </div>
