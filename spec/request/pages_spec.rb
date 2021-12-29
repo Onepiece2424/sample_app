@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Page', type: :request  do
+RSpec.describe 'Page', type: :request do
   let(:page) { create(:page) }
-  binding.pry
+
   before do
     get pages_path
   end
