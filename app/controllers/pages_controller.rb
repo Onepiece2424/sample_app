@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @pages = Page.all
+    flash[:notice] = "ログイン済ユーザーのみ記事の詳細を確認できます" unless user_signed_in?
   end
 
   def new
@@ -42,4 +43,8 @@ class PagesController < ApplicationController
     flash[:notice] = 'Worryを1つ解決しました!!'
     redirect_to :pages
   end
+
+  # def current_user
+  #   @current_user ||= warden.authenticate(scope: :user)
+  # end
 end
