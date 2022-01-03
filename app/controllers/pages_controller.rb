@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :new]
+  before_action :authenticate_user!, only: [:index, :show, :new]
 
   def index
     @pages = Page.all
@@ -44,7 +44,6 @@ class PagesController < ApplicationController
     redirect_to :pages
   end
 
-  # def current_user
-  #   @current_user ||= warden.authenticate(scope: :user)
-  # end
+  def description
+  end
 end
