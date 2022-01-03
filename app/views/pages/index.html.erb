@@ -1,9 +1,9 @@
 <div class="row_button">
-<div class="button">
-  <p><%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %></p>
-  <p><%= link_to "新規登録", new_user_registration_path, class:"btn btn-primary" %></p>
-  <p><%= link_to "ログアウト", destroy_user_session_path, class:"btn btn-primary" %></p>
-</div>
+  <div class="button">
+    <p><%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %></p>
+    <p><%= link_to "新規登録", new_user_registration_path, class:"btn btn-primary" %></p>
+    <p><%= link_to "ログアウト", destroy_user_session_path, class:"btn btn-primary" %></p>
+  </div>
 </div>
 
 <h1>Would you like to solve your worries?</h1>
@@ -47,3 +47,4 @@
 </table>
 <br>
 <p><%= link_to "Create a Worry", new_page_path, class:"btn btn-primary" %></p>
+<p><%= link_to "How to use", description_pages_path, class:"btn btn-primary" %></p>
