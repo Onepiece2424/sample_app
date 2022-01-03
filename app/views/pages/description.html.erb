@@ -1,0 +1,21 @@
+<div class="row_button">
+  <div class="button">
+    <p><%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %></p>
+    <p><%= link_to "新規登録", new_user_registration_path, class:"btn btn-primary" %></p>
+    <p><%= link_to "ログアウト", destroy_user_session_path, class:"btn btn-primary" %></p>
+  </div>
+</div>
+
+<h1>Would you like to solve your worries?</h1>
+<br>
+<h4>＊このアプリについて</h4>
+<br>
+<p>特徴</p>
+<p>自分の悩みや不安を書き出し、対処法を考え、行動に移すことを目的としたアプリです。</p>
+<br>
+<p>使い方</p>
+<p>まず、自分の現在の悩みや不安を書き出し、その内容を把握します。</p>
+<p>次に、その悩みや不安の原因は何か、なぜそう考えるのかなど、気になることを書き出します。</P>
+<p>最後に、その悩みや不安をどうすれば克服・解消できるか考え、対処法を記入します。</p>
+<br>
+<p><%= link_to "Worry List", pages_path, class:"btn btn-primary" %></p>
