@@ -6,12 +6,12 @@
 <%= form_with(model: @page, local: true) do |form| %>
   <div class="col-md-2">
     <%= form.label :date %>
-    <%= form.text_field :date %>
+    <%= form.date_field :date %>
   </div>
 
   <div class="col-md-2">
     <%= form.label :category %>
-    <%= form.text_field :category %>
+    <%= form.select :category, [["お金", "お金"], ["健康", "健康"], ["恋愛", "恋愛"], ["キャリア", "キャリア"], ["その他", "その他"]], include_blank: "選択して下さい" %>
   </div>
 
   <div class="col-md-2">

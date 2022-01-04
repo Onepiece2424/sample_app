@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.new(params.require(:page).permit(:date, :worry, :reason, :approach))
+    @page = Page.new(params.require(:page).permit(:date, :category, :worry, :thinking, :approach))
     if @page.save
       redirect_to :pages
     else
@@ -29,7 +29,7 @@ class PagesController < ApplicationController
 
   def update
     @page = Page.find(params[:id])
-    if @page.update(params.require(:page).permit(:date, :worry, :reason, :approach))
+    if @page.update(params.require(:page).permit(:date, :category, :worry, :thinking, :approach))
       flash[:notice] = "「Worry」の情報を更新しました"
       redirect_to :pages
     else

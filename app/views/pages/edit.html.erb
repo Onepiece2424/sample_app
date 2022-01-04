@@ -7,11 +7,11 @@
   <table>
     <tr>
       <th><%= f.label :date ,"Date" %></th>
-      <td><%= f.text_field :date %></td>
+      <td><%= f.date_field :date %></td>
     </tr>
     <tr>
       <th><%= f.label :category ,"Category" %></th>
-      <td><%= f.text_area :category %></td>
+      <td><%= f.select :category, [["お金", "お金"], ["健康", "健康"], ["恋愛", "恋愛"], ["キャリア", "キャリア"], ["その他", "その他"]], include_blank: "選択して下さい" %></td>
     </tr>
     <tr>
       <th><%= f.label :worry ,"Worry" %></th>
@@ -28,7 +28,7 @@
   </table>
   <br>
   <div>
-    <%= f.submit "編集を完了する" %>
+    <%= f.submit "Completion of editing" %>
   </div>
 <% end %>
 </div>
