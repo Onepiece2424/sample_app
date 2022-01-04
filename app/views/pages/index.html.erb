@@ -17,6 +17,7 @@
   <thead>
     <tr>
       <th class="col-md-2">Date</th>
+      <th class="col-md-2">Category</th>
       <th class="col-md-2">Worry</th>
       <th class="col-md-3">Thinking</th>
       <th class="col-md-3">Approach</th>
@@ -31,6 +32,7 @@
     <% @pages.each do |page| %>
       <tr>
         <td class="col-md-2"><%= page.date %></td>
+        <td class="col-md-2"><%= page.category %></td>
         <td class="col-md-2"><%= page.worry %></td>
         <td class="col-md-3"><%= page.thinking %></td>
         <td class="col-md-3"><%= page.approach %></td>

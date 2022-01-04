@@ -9,6 +9,10 @@
         <td><%= @page.date %></td>
       </tr>
       <tr>
+        <th>Category</th>
+        <td><%= @page.category %></td>
+      </tr>
+      <tr>
         <th>Worry</th>
         <td><%= @page.worry %></td>
       </tr>
@@ -25,4 +29,4 @@
 </div>
 <br>
 <br>
-<p><%= link_to "トップページ", root_path, class:"btn btn-primary" %></p>
+<p><%= link_to "Worry List", pages_path, class:"btn btn-primary" %></p>

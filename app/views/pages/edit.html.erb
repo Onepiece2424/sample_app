@@ -10,6 +10,10 @@
       <td><%= f.text_field :date %></td>
     </tr>
     <tr>
+      <th><%= f.label :category ,"Category" %></th>
+      <td><%= f.text_area :category %></td>
+    </tr>
+    <tr>
       <th><%= f.label :worry ,"Worry" %></th>
       <td><%= f.text_area :worry %></td>
     </tr>
@@ -30,4 +34,4 @@
 </div>
 </div>
 <br>
-<p><%= link_to "トップページ", root_path, class:"btn btn-primary" %></p>
+<p><%= link_to "Worry List", pages_path, class:"btn btn-primary" %></p>
