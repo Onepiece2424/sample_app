@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_26_032803) do
+ActiveRecord::Schema.define(version: 2022_01_04_023211) do
 
   create_table "pages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "date"
     t.text "worry"
-    t.text "reason"
+    t.text "thinking"
     t.text "approach"
   end
 
