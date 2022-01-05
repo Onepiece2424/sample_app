@@ -1,20 +1,20 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe 'Page', type: :request do
-#   let(:page) { create(:page) }
+RSpec.describe 'Page', type: :request do
+  let(:page) { create(:page) }
 
-#   before do
-#     get pages_path
-#   end
+  before do
+    get pages_path
+  end
 
-#   describe 'Worry一覧ページ' do
-#     it 'レスポンスが返ってくること' do
-#       expect(response.status).to eq(200)
-#     end
+  # describe 'Worry一覧ページ' do
+    it 'レスポンスが返ってくること' do
+      expect(response.status).to eq(302)
+    end
 
-#     it 'ページタイトルが存在していること' do
-#       assert_select "title", "Worry List"
-#     end
+    # it 'ページタイトルが存在していること' do
+    #   assert_select "title", "Worry List"
+    # end
 
 #     it 'レスポンスにdateが含まれること' do
 #       expect(response.body). to include page.date
@@ -36,4 +36,4 @@
 #       expect(response.body). to include page.approach
 #     end
 #   end
-# end
+end
