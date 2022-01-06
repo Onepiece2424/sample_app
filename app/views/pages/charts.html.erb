@@ -1,4 +1,6 @@
 <div class="column_chart">
   <%= column_chart Page.group(:category).count %>
 </div>
-<p class="chart"><%= link_to "Worry List", pages_path, class:"btn btn-primary" %></p>
+<p class="chart">
+  <%= link_to "Worry List", pages_path, class:"btn btn-primary" %>
+</p>
