@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'pages#description'
   resources :pages do
     collection do
-      get :description
+      get :description, :charts
     end
   end
   devise_for :users
