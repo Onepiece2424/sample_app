@@ -6,4 +6,9 @@ FactoryBot.define do
     thinking { "test_thinking" }
     approach { "test_approach" }
   end
+
+  factory :user do
+    email                   { "aaa@gmail.com" }
+    password                { "00000000" }
+  end
 end
