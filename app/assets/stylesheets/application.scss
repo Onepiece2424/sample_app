@@ -37,3 +37,73 @@ h1:before {
   bottom:-12px;
   right:-12px;
 }
+
+.button {
+  display: flex;
+  position:absolute; top:0%; right:0%;
+}
+
+h2 {
+  padding-bottom: 10px;
+  border-bottom: 3px solid #000;
+}
+
+.function {
+  margin-top: 50px;
+}
+
+.top {
+  padding-bottom: 200px;
+}
+
+.create1 {
+  padding: 30px 20px;
+  float: left;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+tr.table {
+  padding-top: 40px;
+}
+
+h4.application {
+  padding-top: 40px;
+}
+
+.feature {
+  padding-top: 20px;
+}
+
+.howto {
+  padding-top: 20px;
+}
+
+.worrylist {
+  padding-top: 20px;
+}
+
+.chart {
+  margin-top: 250px;
+}
+
+.column_chart {
+  padding-top: 100px;
+}
+
+.inner{
+  text-align: center;
+  padding-top: 50px;
+  font-size: 25px;
+}
+
+th.tagname {
+  padding-right: 30px;
+}
+
+input[type="date"] {
+  width: 300px;
+  height: 40px;
+}

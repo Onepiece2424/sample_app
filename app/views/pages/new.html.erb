@@ -1,0 +1,39 @@
+<h1>Would you like to solve your worries?</h1>
+<br>
+<br>
+<div class="container">
+<div class="row">
+<%= form_with model: @page do |f| %>
+  <div class="col-md-2">
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div class="col-md-2">
+    <%= f.label :category %>
+    <%= f.select :category, [["お金", "お金"], ["健康", "健康"], ["恋愛", "恋愛"], ["キャリア", "キャリア"], ["その他", "その他"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="col-md-2">
+    <%= f.label :worry %>
+    <%= f.text_area :worry %>
+  </div>
+
+  <div class="col-md-2">
+    <%= f.label :thinking, "Thinking" %>
+    <%= f.text_area :thinking %>
+  </div>
+
+  <div class="col-md-2">
+    <%= f.label :approach %>
+    <%= f.text_area :approach %>
+  </div>
+  <br>
+  <div class="col-md-2">
+    <%= f.submit "Create a worry" %>
+  </div>
+<% end %>
+</div>
+</div>
+<br>
+<p><%= link_to "Back to the worry list", pages_path, class:"btn btn-primary" %></p>

@@ -1,3 +1,32 @@
-<h1>詳細ページ</h1>
+<h1>Would you like to solve your worries?</h1>
 <br>
-<p><%= link_to "トップページ", root_path, class:"btn btn-primary" %></p>
+<br>
+<div class="container">
+  <div class="row">
+    <table>
+      <tr>
+        <th>Date</th>
+        <td><%= @page.date %></td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td><%= @page.category %></td>
+      </tr>
+      <tr>
+        <th>Worry</th>
+        <td><%= @page.worry %></td>
+      </tr>
+      <tr>
+        <th>Thinking</th>
+        <td><%= @page.thinking %></td>
+      </tr>
+      <tr>
+        <th>Approach</th>
+        <td><%= @page.approach %></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<br>
+<br>
+<p><%= link_to "Worry List", pages_path, class:"btn btn-primary" %></p>
