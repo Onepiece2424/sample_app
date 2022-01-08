@@ -1,6 +1,11 @@
 <div class="column_chart">
   <%= column_chart Page.group(:category).count %>
 </div>
+<div class="outer">
+  <div class="inner">
+    カテゴリーごとの悩みの数を表したグラフ
+  </div>
+</div>
 <p class="chart">
   <%= link_to "Worry Listに戻る", pages_path, class:"btn btn-primary" %>
 </p>
