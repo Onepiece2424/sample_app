@@ -3,44 +3,42 @@
 <br>
 <h2>Worry List</h2>
 <br>
-<table>
-  <div class="container">
-  <div class="row">
-  <thead>
-    <tr>
-      <th class="col-md-2">Date</th>
-      <th class="col-md-2">Category</th>
-      <th class="col-md-2">Worry</th>
-      <th class="col-md-3">Thinking</th>
-      <th class="col-md-3">Approach</th>
-      <th class="col-md-2">Detail/Edit/Delete</th>
-    </tr>
-  </thead>
-  </div>
-  </div>
-  <tbody>
-  <div class="container">
-  <div class="row">
-    <% @pages.each do |page| %>
-      <tr class="table" >
-        <td class="col-md-2"><%= page.date %></td>
-        <td class="col-md-2"><%= page.category %></td>
-        <td class="col-md-2"><%= page.worry %></td>
-        <td class="col-md-3"><%= page.thinking %></td>
-        <td class="col-md-3"><%= page.approach %></td>
-        <td class="col-md-2">
-          <%= link_to "Detail", page_path(page.id) %>
-          <%= link_to "Edit", edit_page_path(page.id) %>
-          <%= link_to "Delete", page, method: :delete %>
-        </td>
+<div class="main">
+  <table>
+    <div class="container">
+    <div class="row">
+    <thead>
+      <tr>
+        <th class="col-md-2">Date</th>
+        <th class="col-md-2">Category</th>
+        <th class="col-md-2">Worry</th>
+        <th class="col-md-3">Thinking</th>
+        <th class="col-md-3">Approach</th>
+        <th class="col-md-2">Detail/Edit/Delete</th>
       </tr>
-    <% end %>
-  </div>
-  </div>
-  </tbody>
-</table>
-<div class="create">
-  <div class="create1"><%= link_to "Create a Worry", new_page_path, class:"btn btn-primary" %></div>
-  <div class="create1"><%= link_to "How to use", description_pages_path, class:"btn btn-primary" %></div>
-  <div class="create1"><%= link_to "Create Charts", charts_pages_path, class:"btn btn-primary" %></div>
+    </thead>
+    </div>
+    </div>
+    <tbody>
+    <div class="container">
+    <div class="row">
+      <% @pages.each do |page| %>
+        <tr class="table" >
+          <td class="col-md-2"><%= page.date %></td>
+          <td class="col-md-2"><%= page.category %></td>
+          <td class="col-md-2"><%= page.worry %></td>
+          <td class="col-md-3"><%= page.thinking %></td>
+          <td class="col-md-3"><%= page.approach %></td>
+          <td class="col-md-2">
+            <%= link_to "Detail", page_path(page.id) %>
+            <%= link_to "Edit", edit_page_path(page.id) %>
+            <%= link_to "Delete", page, method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </div>
+    </div>
+    </tbody>
+  </table>
+<%= render 'shared/worry_button' %>
 </div>
