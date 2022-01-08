@@ -6,23 +6,23 @@
     <%= form_with model: @page do |f| %>
       <table>
         <tr>
-          <th><%= f.label :date ,"Date" %></th>
+          <th class="tagname"><%= f.label :date ,"Date" %></th>
           <td><%= f.date_field :date %></td>
         </tr>
         <tr>
-          <th><%= f.label :category ,"Category" %></th>
+          <th class="tagname"><%= f.label :category ,"Category" %></th>
           <td><%= f.select :category, [["お金", "お金"], ["健康", "健康"], ["恋愛", "恋愛"], ["キャリア", "キャリア"], ["その他", "その他"]], include_blank: "選択して下さい" %></td>
         </tr>
         <tr>
-          <th><%= f.label :worry ,"Worry" %></th>
+          <th class="tagname"><%= f.label :worry ,"Worry" %></th>
           <td><%= f.text_area :worry %></td>
         </tr>
         <tr>
-          <th><%= f.label :thinking ,"Thinking" %></th>
+          <th class="tagname"><%= f.label :thinking ,"Thinking" %></th>
           <td><%= f.text_area :thinking %></td>
         </tr>
         <tr>
-          <th><%= f.label :approach ,"Approach" %></th>
+          <th class="tagname"><%= f.label :approach ,"Approach" %></th>
           <td><%= f.text_area :approach %></td>
         </tr>
       </table>
