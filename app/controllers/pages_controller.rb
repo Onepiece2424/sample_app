@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:index, :show, :new]
-  PER = 8
+  PER = 4
   def index
     @pages = Page.all.page(params[:page]).per(PER)
     flash[:notice] = "ログイン済ユーザーのみ記事の詳細を確認できます" unless user_signed_in?
