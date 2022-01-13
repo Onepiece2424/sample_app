@@ -13,3 +13,5 @@ AllCops:
     - 'lib/tasks/*'
     - 'vendor/**/*'
     - 'path/ruby'
+
+  NewCops: enable
