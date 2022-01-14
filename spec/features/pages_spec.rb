@@ -34,4 +34,8 @@ RSpec.feature "Pages", type: :feature do
     expect(page).to have_link 'How to use'
     expect(page).to have_link 'Create Charts'
   end
+
+  scenario 'タイトルが表示されること' do
+    expect(page).to have_title "Worry List"
+  end
 end
