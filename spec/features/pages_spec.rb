@@ -24,4 +24,14 @@ RSpec.feature "Pages", type: :feature do
     expect(page).to have_content p.worry
     expect(page).to have_content p.approach
   end
+
+  scenario "ボタンが表示されること" do
+    visit pages_path
+    expect(page).to have_link 'ログイン'
+    expect(page).to have_link '新規登録'
+    expect(page).to have_link 'ログアウト'
+    expect(page).to have_link 'Create a Worry'
+    expect(page).to have_link 'How to use'
+    expect(page).to have_link 'Create Charts'
+  end
 end
