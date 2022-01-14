@@ -18,23 +18,11 @@ RSpec.describe 'Page', type: :request do
       assert_select "title", "Worry List"
     end
 
-    it 'レスポンスにdateが含まれること' do
+    it 'レスポンスにdate、category、worry、thinking、approachが含まれること' do
       expect(response.body). to include page.date
-    end
-
-    it 'レスポンスにcategoryが含まれること' do
       expect(response.body). to include page.category
-    end
-
-    it 'レスポンスにworryが含まれること' do
       expect(response.body). to include page.worry
-    end
-
-    it 'レスポンスにthinkingが含まれること' do
       expect(response.body). to include page.thinking
-    end
-
-    it 'レスポンスにapproachが含まれること' do
       expect(response.body). to include page.approach
     end
   end
