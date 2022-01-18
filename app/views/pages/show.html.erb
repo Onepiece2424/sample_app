@@ -30,3 +30,20 @@
 <br>
 <br>
 <p><%= link_to "Worry List", pages_path, class:"btn btn-primary" %></p>
+<br>
+<br>
+<br>
+<h2>コメント一覧</h2>
+<% @comments.each do |c| %>
+  <div>
+    <%= c.comment_content %>
+  </div>
+<% end %>
+
+<%= form_with(model:[@page, @comment], method: :post) do |f| %>
+  <%= f.text_field :comment_content %>
+  <%= f.hidden_field :page_id, value: @page.id %>
+  <br>
+  <br>
+  <%= f.submit 'コメントする' %>
+<% end %>
